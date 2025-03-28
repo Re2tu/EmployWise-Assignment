@@ -1,19 +1,18 @@
-
 .container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background-color: #f3f4f6;
+  width: 100%;
 }
 
-
 .user-list {
-  max-width: 900px;
   width: 100%;
+  max-width: 900px;
   background: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
@@ -21,17 +20,19 @@
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  gap: 10px;
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 1.25rem;
   color: #333;
   font-weight: bold;
+  margin: 0;
 }
-
 
 .logout-btn {
   display: flex;
@@ -41,10 +42,10 @@ h1 {
   border: 1px solid rgb(227, 47, 47);
   color: rgb(227, 47, 47);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: 6px 12px;
   border-radius: 8px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .logout-btn:hover {
@@ -52,63 +53,67 @@ h1 {
   color: white;
 }
 
-
 .search-input {
-  width: 100%;
+  width: 95%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
   margin-bottom: 15px;
-  font-size: 14px;
-  transition: border 0.3s ease;
+  font-size: 0.875rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search-input:focus {
   border-color: #3c36b4;
+  box-shadow: 0 0 5px rgba(60, 54, 180, 0.3);
   outline: none;
 }
-
 
 .user-table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 0.75rem;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
-.user-table th, .user-table td {
-  padding: 12px;
+.user-table th,
+.user-table td {
+  padding: 8px;
   border-bottom: 1px solid #ddd;
   text-align: left;
 }
 
 .user-table th {
   background: #f9fafb;
-  font-size: 14px;
   color: #555;
   font-weight: bold;
 }
 
-
 .avatar {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
+  object-fit: cover;
 }
-
 
 .actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
-.edit-btn, .delete-btn {
+.edit-btn,
+.delete-btn {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 18px;
-  transition: transform 0.2s ease;
+  font-size: 1rem;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.edit-btn:hover, .delete-btn:hover {
+.edit-btn:hover,
+.delete-btn:hover {
   transform: scale(1.1);
 }
 
@@ -122,51 +127,86 @@ h1 {
 
 .pagination {
   margin-top: 15px;
-  text-align: center;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 5px;
 }
 
 .page-btn {
-  padding: 8px 12px;
+  padding: 6px 10px;
   border: none;
   cursor: pointer;
   background: #eee;
   border-radius: 6px;
-  font-size: 14px;
-  transition: background 0.3s ease;
+  font-size: 0.875rem;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.page-btn:hover, .page-btn.active {
+.page-btn:hover,
+.page-btn.active {
   background: #3c36b4;
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
   .user-list {
-    padding: 12px;
+    padding: 20px;
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 1.375rem;
   }
 
   .logout-btn {
-    font-size: 12px;
+    font-size: 0.875rem;
+    padding: 8px 16px;
   }
 
   .search-input {
-    font-size: 13px;
-    padding: 6px;
-  }
-
-  .user-table th, .user-table td {
-    font-size: 12px;
+    font-size: 0.875rem;
     padding: 10px;
   }
 
-  .pagination {
-    flex-wrap: wrap;
+  .user-table {
+    font-size: 0.875rem;
+    display: table;
+    overflow-x: visible;
+    white-space: normal;
   }
+
+  .user-table th,
+  .user-table td {
+    padding: 12px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 1.125rem;
+  }
+
+  .page-btn {
+    padding: 8px 12px;
+  }
+}
+
+.logout-btn:focus,
+.edit-btn:focus,
+.delete-btn:focus,
+.page-btn:focus {
+  outline: 2px solid #3c36b4;
+  outline-offset: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
