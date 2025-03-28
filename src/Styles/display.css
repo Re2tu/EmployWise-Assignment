@@ -1,3 +1,11 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -7,15 +15,18 @@
   background-color: #f3f4f6;
 }
 
+/* User List Card */
 .user-list {
   max-width: 900px;
   width: 100%;
   background: white;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -24,18 +35,28 @@
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 26px;
   color: #333;
+  font-weight: bold;
 }
 
+/* Logout Button */
 .logout-btn {
   background: none;
-  border: none;
+  border: 1px solid rgb(227, 47, 47);
   color: rgb(227, 47, 47);
   cursor: pointer;
   display: flex;
   align-items: center;
   font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgb(227, 47, 47);
+  color: white;
 }
 
 .logout-btn .icon {
@@ -44,26 +65,40 @@ h1 {
   margin-right: 5px;
 }
 
+/* Search Input */
 .search-input {
-  width: 95%;
-  padding: 8px;
+  width: 100%;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-bottom: 20px;
+  font-size: 14px;
+  transition: border 0.3s ease;
 }
 
+.search-input:focus {
+  border-color: #3c36b4;
+  outline: none;
+}
+
+/* Loading Text */
 .loading {
   text-align: center;
   padding: 20px;
+  font-size: 16px;
+  color: #555;
 }
 
+/* Table Styles */
 .user-table {
   width: 100%;
   border-collapse: collapse;
+  background: white;
 }
 
-.user-table th, .user-table td {
-  padding: 10px;
+.user-table th,
+.user-table td {
+  padding: 12px;
   border-bottom: 1px solid #ddd;
   text-align: left;
 }
@@ -72,19 +107,30 @@ h1 {
   background: #f9fafb;
   font-size: 14px;
   color: #555;
+  font-weight: bold;
 }
 
+/* User Avatar */
 .avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.edit-btn, .delete-btn {
+/* Buttons */
+.edit-btn,
+.delete-btn {
   background: none;
   border: none;
   cursor: pointer;
   margin-right: 10px;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.1);
 }
 
 .edit-btn .icon {
@@ -95,46 +141,62 @@ h1 {
   color: rgb(210, 74, 74);
 }
 
+/* Pagination */
 .pagination {
   margin-top: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
 .page-btn {
-  padding: 5px 10px;
-  margin: 2px;
+  padding: 8px 12px;
   border: none;
   cursor: pointer;
   background: #eee;
   border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.page-btn:hover {
+  background: #3c36b4;
+  color: white;
 }
 
 .page-btn.active {
   background: #3c36b4;
   color: white;
+  font-weight: bold;
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .user-list {
-      padding: 15px;
+    padding: 15px;
   }
 
   h1 {
-      font-size: 20px;
+    font-size: 22px;
   }
 
   .logout-btn {
-      font-size: 12px;
+    font-size: 12px;
   }
 
-  .user-table th, .user-table td {
-      font-size: 12px;
-      padding: 8px;
+  .search-input {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .user-table th,
+  .user-table td {
+    font-size: 12px;
+    padding: 8px;
   }
 
   .pagination {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    flex-wrap: wrap;
   }
 }
