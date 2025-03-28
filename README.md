@@ -29,11 +29,12 @@ A user management application built with React.js and integrated with the Reqres
    npm install vite@latest react-router-dom react-hot-toast lucide-react axios
    ```
 3. **Setup Environment Variables**
-   - Create a `.env` file in the root directory and add:
-     ```sh
+
+   Create a `.env` file in the root directory and add:
+   ```sh
      VITE_BASE_URL=https://reqres.in/api
-     ```
-4. **Run the Project Locally**
+   ```
+5. **Run the Project Locally**
    ```sh
    npm run dev
    ```
