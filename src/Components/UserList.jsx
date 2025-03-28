@@ -3,7 +3,7 @@ import { Edit2, LogOut, Trash2 } from 'lucide-react';
 import { getUsers,deleteUser } from '../api';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import '../Styles/display.css';
+import '../Styles/userlist.css';
 
 
 function Display() {
