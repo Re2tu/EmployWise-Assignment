@@ -1,4 +1,4 @@
-/* General Styles */
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -8,7 +8,7 @@
   background-color: #f3f4f6;
 }
 
-/* User List Card */
+
 .user-list {
   max-width: 900px;
   width: 100%;
@@ -19,7 +19,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Header Styling */
 .header {
   display: flex;
   justify-content: space-between;
@@ -33,7 +32,7 @@ h1 {
   font-weight: bold;
 }
 
-/* Logout Button */
+
 .logout-btn {
   display: flex;
   align-items: center;
@@ -53,7 +52,7 @@ h1 {
   color: white;
 }
 
-/* Search Box */
+
 .search-input {
   width: 100%;
   padding: 8px;
@@ -69,7 +68,7 @@ h1 {
   outline: none;
 }
 
-/* Table Styling */
+
 .user-table {
   width: 100%;
   border-collapse: collapse;
@@ -88,14 +87,14 @@ h1 {
   font-weight: bold;
 }
 
-/* User Avatar */
+
 .avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-/* Action Buttons */
+
 .actions {
   display: flex;
   gap: 10px;
@@ -121,7 +120,6 @@ h1 {
   color: rgb(210, 74, 74);
 }
 
-/* Pagination */
 .pagination {
   margin-top: 15px;
   text-align: center;
@@ -145,7 +143,6 @@ h1 {
   color: white;
 }
 
-/* Mobile Optimization */
 @media (max-width: 768px) {
   .user-list {
     padding: 12px;
