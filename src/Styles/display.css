@@ -1,0 +1,140 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f3f4f6;
+}
+
+.user-list {
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: rgb(227, 47, 47);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.logout-btn .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.search-input {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-table th {
+  background: #f9fafb;
+  font-size: 14px;
+  color: #555;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.edit-btn .icon {
+  color: rgb(40, 40, 114);
+}
+
+.delete-btn .icon {
+  color: rgb(210, 74, 74);
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.page-btn {
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  cursor: pointer;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.page-btn.active {
+  background: #3c36b4;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .user-list {
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 20px;
+  }
+
+  .logout-btn {
+      font-size: 12px;
+  }
+
+  .user-table th, .user-table td {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  .pagination {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+}
