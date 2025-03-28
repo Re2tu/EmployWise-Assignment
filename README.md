@@ -39,18 +39,12 @@ A user management application built with React.js and integrated with the Reqres
    npm run dev
    ```
 
-## Deployment
-### Deploying on Vercel
-1. Push your code to GitHub.
-2. Go to [Vercel](https://vercel.com/) and log in.
-3. Click **New Project** → **Import GitHub Repository**.
-4. Add Environment Variable in Vercel:
-   - **Key:** `VITE_BASE_URL`
-   - **Value:** `https://reqres.in/api`
-5. Click **Deploy** and get the live URL.
+## 🔗 Live Project URL
+**[Employwise Live](https://employ-wise-assignment-six.vercel.app)**
 
-### Live Project URL
-[Employwise Live](https://employ-wise-assignment-six.vercel.app)
+
+
+
 
 
 
