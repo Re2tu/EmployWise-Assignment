@@ -1,10 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
+/* General Styles */
 .container {
   min-height: 100vh;
   display: flex;
@@ -14,7 +8,7 @@
   background-color: #f3f4f6;
 }
 
-
+/* User List Card */
 .user-list {
   max-width: 900px;
   width: 100%;
@@ -25,31 +19,32 @@
   transition: all 0.3s ease-in-out;
 }
 
-
+/* Header Styling */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 22px;
   color: #333;
   font-weight: bold;
 }
 
-
+/* Logout Button */
 .logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   background: none;
   border: 1px solid rgb(227, 47, 47);
   color: rgb(227, 47, 47);
   cursor: pointer;
-  display: flex;
-  align-items: center;
   font-size: 14px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 6px 12px;
+  border-radius: 8px;
   transition: background 0.3s ease;
 }
 
@@ -58,19 +53,13 @@ h1 {
   color: white;
 }
 
-.logout-btn .icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
-}
-
-
+/* Search Box */
 .search-input {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  border-radius: 6px;
+  margin-bottom: 15px;
   font-size: 14px;
   transition: border 0.3s ease;
 }
@@ -80,22 +69,13 @@ h1 {
   outline: none;
 }
 
-.loading {
-  text-align: center;
-  padding: 20px;
-  font-size: 16px;
-  color: #555;
-}
-
-
+/* Table Styling */
 .user-table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
 }
 
-.user-table th,
-.user-table td {
+.user-table th, .user-table td {
   padding: 12px;
   border-bottom: 1px solid #ddd;
   text-align: left;
@@ -108,26 +88,28 @@ h1 {
   font-weight: bold;
 }
 
-
+/* User Avatar */
 .avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
+/* Action Buttons */
+.actions {
+  display: flex;
+  gap: 10px;
+}
 
-.edit-btn,
-.delete-btn {
+.edit-btn, .delete-btn {
   background: none;
   border: none;
   cursor: pointer;
-  margin-right: 10px;
-  font-size: 16px;
+  font-size: 18px;
   transition: transform 0.2s ease;
 }
 
-.edit-btn:hover,
-.delete-btn:hover {
+.edit-btn:hover, .delete-btn:hover {
   transform: scale(1.1);
 }
 
@@ -139,8 +121,9 @@ h1 {
   color: rgb(210, 74, 74);
 }
 
+/* Pagination */
 .pagination {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -152,29 +135,24 @@ h1 {
   border: none;
   cursor: pointer;
   background: #eee;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 14px;
   transition: background 0.3s ease;
 }
 
-.page-btn:hover {
+.page-btn:hover, .page-btn.active {
   background: #3c36b4;
   color: white;
 }
 
-.page-btn.active {
-  background: #3c36b4;
-  color: white;
-  font-weight: bold;
-}
-
+/* Mobile Optimization */
 @media (max-width: 768px) {
   .user-list {
-    padding: 15px;
+    padding: 12px;
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .logout-btn {
@@ -183,13 +161,12 @@ h1 {
 
   .search-input {
     font-size: 13px;
-    padding: 8px;
+    padding: 6px;
   }
 
-  .user-table th,
-  .user-table td {
+  .user-table th, .user-table td {
     font-size: 12px;
-    padding: 8px;
+    padding: 10px;
   }
 
   .pagination {
